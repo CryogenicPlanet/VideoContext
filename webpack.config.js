@@ -1,4 +1,5 @@
 /* eslint-env node */
+const NpmDtsPlugin = require("npm-dts-webpack-plugin");
 
 const env = process.env.TEST_SUITE;
 
@@ -20,11 +21,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: [
-                    { loader: "babel-loader" },
-                    { loader: "eslint-loader" }
-                ]
+                use: [{ loader: "babel-loader" }, { loader: "eslint-loader" }]
             }
         ]
-    }
+    },
+    plugins: [new NpmDtsPlugin({ logLevel: "debug", output: "dist/index.d.ts" })]
 };
