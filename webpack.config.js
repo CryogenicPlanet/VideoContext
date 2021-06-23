@@ -12,7 +12,7 @@ module.exports = {
         path: __dirname + "/dist",
         filename: "videocontext.js",
         libraryTarget: "umd",
-        library: "VideoContext"
+        library: "@cryogenicplanet/videocontext"
     },
     module: {
         rules: [
@@ -25,5 +25,5 @@ module.exports = {
             }
         ]
     },
-    plugins: [new NpmDtsPlugin({ logLevel: "debug", output: "dist/index.d.ts" })]
+    plugins: [new NpmDtsPlugin({ logLevel: "debug" })]
 };

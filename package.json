@@ -1,6 +1,6 @@
 {
   "name": "@cryogenicplanet/videocontext",
-  "version": "0.53.2",
+  "version": "0.53.2-c",
   "description": "A WebGL & HTML5 graph based video composition library",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "license": "Apache-2.0",
   "main": "dist/videocontext.js",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "keywords": [
     "video",
     "context",
@@ -18,10 +18,7 @@
     "webgl"
   ],
   "contributors": [
-    {
-      "name": "Matthew Shotton",
-      "email": "matthew.shotton@bbc.co.uk"
-    }
+    "Matthew Shotton <matthew.shotton@bbc.co.uk>"
   ],
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch",
@@ -84,7 +81,8 @@
     "webpack-cli": "^3.0.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "jest": {
     "moduleNameMapper": {
@@ -93,5 +91,16 @@
     "testMatch": [
       "**/test/(integration|unit)/?(*.)+(spec|test).js?(x)"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/bbc/VideoContext/issues"
+  },
+  "homepage": "https://github.com/bbc/VideoContext#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
